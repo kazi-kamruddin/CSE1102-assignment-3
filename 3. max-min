@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int check_num(int, int);
+
+int main() {
+
+    int x,y,flag;
+    printf ("enter two different number: ");
+    scanf ("%d %d",&x,&y);
+
+    flag = check_num(x,y);
+    if (flag)
+       printf ("\nmaximum number is %d and minimum number is %d\n",x,y);
+    else
+       printf ("\nmaximum number is %d and minimum number is %d\n",y,x);
+
+    return 0;
+}
+
+int check_num(int a, int b){
+    if(a>b)
+        return 1;
+    else
+        return 0;
+}
