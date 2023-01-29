@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int check_prime(int);
+
+int main() {
+
+    int x,flag;
+    printf ("enter a number: ");
+    scanf ("%d",&x);
+
+    flag = check_prime(x);
+    if (flag)
+        printf ("\n%d is a prime number\n",x);
+    else
+        printf ("\n%d is not a prime number\n",x);
+
+    return 0;
+}
+
+int check_prime(int a){
+
+    int flag = 1;
+
+    if (a==0 || a==1)
+        flag = 0;
+
+    for (int i=2 ; i<a/2 ; i++){
+        if (a%i == 0)
+            flag =0;
+    }
+    return flag;
+}
