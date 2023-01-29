@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void zero_small(int*, int*);
+
+int main() {
+
+    int x,y;
+    int *p1,*p2;
+    printf ("enter two different number: ");
+    scanf ("%d %d",&x,&y);
+
+    p1 = &x;
+    p2 = &y;
+
+    zero_small(&x, &y);
+
+    printf("\nafter reducing : %d and %d\n\n",x,y);
+
+    return 0;
+}
+
+void zero_small(int *a, int *b){
+    if(*a>*b)
+        *b = 0;
+    else
+        *a = 0;
+}
