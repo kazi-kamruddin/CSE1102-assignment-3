@@ -1,0 +1,35 @@
+#include<stdio.h>
+#define pi 3.1416
+
+float calc_dia(float);
+float calc_circ(float);
+float calc_area(float);
+
+int main() {
+
+    float rad, area, circ, diameter;
+    printf ("enter the radius: ");
+    scanf ("%f", &rad);
+
+    diameter = calc_dia(rad);
+    circ = calc_circ(rad);
+    area = calc_area(rad);
+
+    printf ("\ndiameter of the circle = %.2f\n",diameter);
+    printf ("circumference of the circle = %.2f\n",circ);
+    printf ("area of the circle = %.2f\n",area);
+
+    return 0;
+}
+
+float calc_dia(float rad){
+    return 2*rad;
+}
+
+float calc_circ(float rad){
+    return 2*pi*rad;
+}
+
+float calc_area(float rad){
+    return pi*rad*rad;
+}
