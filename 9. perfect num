@@ -1,0 +1,34 @@
+ #include <stdio.h>
+
+int calc_perfect(int);
+
+int main() {
+    int x,y;
+    printf("enter the lower and upper limit: ");
+    scanf("%d %d",&x,&y);
+
+    printf ("\nall perfect numbers in this intervel: \n\n");
+
+    while (x<=y){
+        if (calc_perfect(x))
+            printf ("%d, ",x);
+        x++;
+    }
+
+    return 0;
+}
+
+int calc_perfect(int a){
+    int i, sum=0;
+
+    for (i=1 ; i<a ; i++){
+        if (a%i == 0){
+            sum = sum + i;
+        }
+    }
+
+    if (sum == a)
+        return 1;
+    else
+        return 0;
+}
