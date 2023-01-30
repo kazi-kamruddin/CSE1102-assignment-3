@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+void natural(int);
+
+int main() {
+
+    int n;
+
+    printf ("enter a number: ");
+    scanf ("%d", &n);
+
+    printf ("\nall natural numbers between 1 and %d: \n\n",n);
+    natural(n);
+
+    return 0;
+}
+
+void natural(int a){
+    if(a>1)
+        natural(a-1);
+    printf ("%d, ", a);
+}
