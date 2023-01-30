@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int ch_pal(int);
+
+int n;
+
+int main() {
+    printf("enter a positive number: ");
+    scanf("%d", &n);
+
+    if (ch_pal(n) == 1)
+        printf ("\n%d is a palindromic number\n", n);
+    else
+        printf ("\n%d is not a palindromic number\n", n);
+
+    return 0;
+}
+
+int ch_pal(int a){
+    static int sum=0;
+
+    if (a!=0){
+        sum = sum*10 + a%10;
+        ch_pal (a/10);
+    }
+    else if (sum == n)
+        return 1;
+    else
+        return 0;
+}
